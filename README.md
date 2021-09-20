@@ -2,7 +2,7 @@
 
 ## Simple Com Tam
 
-The name of your project.
+
 
 ## Project Description
 
@@ -23,34 +23,40 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 {
     "records": [
         {
-            "id": "recONRzIUTuZ5lXaF",
+            "id": "rec2WbmKsAelwTnNF",
             "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
+                "side": "beef broth",
+                "drink": "beer",
+                "rice": "jasmine white",
+                "protein": "grilled pork paste",
+                "Name": "tony"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-09-20T18:22:26.000Z"
         },
         {
-            "id": "rec3oYZ5Tp0AIDsKe",
+            "id": "recUsWi3GYa3CaZJD",
             "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
+                "side": "rice paper and lettuce",
+                "drink": "water",
+                "rice": "chicken rice",
+                "protein": "charbroiled meatball",
+                "Name": "fern"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-09-20T18:22:26.000Z"
         },
         {
-            "id": "recA34tOaoE1IVeC1",
+            "id": "recnHbNjYLnSwp4y0",
             "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
+                "side": "carrot and daikon",
+                "drink": "coke",
+                "rice": "brown rice",
+                "protein": "grilled beef",
+                "Name": "jim"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-09-20T18:22:26.000Z"
         }
     ],
-    "offset": "recA34tOaoE1IVeC1"
+    "offset": "recnHbNjYLnSwp4y0"
 }
 ```
 
@@ -61,15 +67,19 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Find and use external api for food 
+- display the food so the user can select what food option they want
+- edit or delete the food selction
+- display your order and submit your order
+- pay your order with venmo (My QR code Lol)
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add another API to maybe display the calories
+- have a save button of user old order
+- maybe a location API of where the restaurant is
+
 
 ## Timeframes
 
@@ -79,16 +89,28 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Pre/Planning| H | 4hrs|  | |
+| Initial React Structure | H |2hrs |  |  |
+| Googling | H | 4hrs|  |  |
+| Page Styling | M | 4hrs| |  |
+| Routing Set up | H | 2.5hrs|  |  |
+| Working with API | H | 3hrs|  |  |
+| Airtable set up | H | 2hrs|  |  |
+| Axios setup| H | 2hrs|  |  |
+| Form Setup | H | 4hrs|  |  |
+| Form Handling | H | 3hrs|  |  |
+| Debugging| M | 2hrs|  |  |
+| Animation | L | 3hrs|  |  |
+| Deployment | H | 2hrs|  |  |
+| Total |  |37.5hr |  |  |
 
 ## SWOT Analysis
 
 ### Strengths:
-
+    I have a good unerstanding with React and what I want to buld this week.  I think I know where to start.  I think the wireframe will guide me on building on this project.
 ### Weaknesses:
-
+    I am debating if I want to used everything I learn for this project.  I don't have a great understanding on class components as function components. We don't have to used class extend components but I want to get better at react so I might attempt to apply it. 
 ### Opportunities:
-
+    I have an opportunity to work with Airtable API and create my own API.  this will give me a better opportunity to have a better understadning with API.  I also be able to build my own project with react and hopefully it will be done in time and I am able to present it on project day.
 ### Threats:
+I am afraid that I will not have enough time to implement everything I want.  I also hope I don't overthink my project and try to do to much.  To solve this problem my plan is to have the basic of my app up and running before I try to do to much.
