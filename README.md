@@ -67,11 +67,11 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api for food 
-- display the food so the user can select what food option they want
+- create a form when the user can order 
+- display the food so the user can select what food option they want (using air table)
 - edit or delete the food selction
-- display your order and submit your order
-- pay your order with venmo (My QR code Lol)
+- display previous favorite food order
+
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
@@ -79,6 +79,8 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 - Add another API to maybe display the calories
 - have a save button of user old order
 - maybe a location API of where the restaurant is
+- Find and use external api for food 
+- pay your order with venmo (My QR code Lol)
 
 
 ## Timeframes
