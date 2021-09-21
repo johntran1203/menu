@@ -27,7 +27,7 @@ function App() {
         <main>
           {/* map through the characters array and render a p tag for each one with the character's name field as its text content */}
           {foods.map((food) => (
-            <Food key={food.id} food ={food}/>
+            <Food key={food.id} food ={food} setToggleFetch={setToggleFetch}/>
           ))}
         </main>
       </Route>

@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import axios from 'axios';
+import { useState } from 'react';
+import { baseURL, config } from '../services';
 
 
 function Form(props) {
@@ -7,8 +9,23 @@ function Form(props) {
     const [rice, setRice] = useState('')
     const [side, setSide] = useState('')
     const [rating, setRating] = useState(0)
+
+    const orderFood = async (e) => {
+        e.preventDefault();
+        const newFood = {
+            name,
+            protein,
+            rice,
+            side,
+            rating,
+        }
+        await axios.post(baseURL, { fields: newFood}, config)
+
+        props.setToggleFetch((curr) => !curr);
+    }
+
     return (
-    <form>
+    <form onSubmit = {orderFood}>
         <label htmlFor="name">Name:</label>
         <input id="name" type="text" value={name} required autoComplete = 'off' autoFocus
         onChange={(e) => setName(e.target.value)}/>
