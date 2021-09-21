@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
+import Food from "./components/Food";
 import Nav from "./components/Nav";
 import { baseURL, config } from "./services";
 import './App.css';
 
 function App() {
-  const [foods, setFood] = useState[];
+  const [foods, setFood] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
     const getMenu = async () => {
@@ -22,7 +23,12 @@ function App() {
     <div className="App">
       <Nav />
       <Route exact path="/">
-        <h3>This is the home!</h3>
+        <main>
+          {/* map through the characters array and render a p tag for each one with the character's name field as its text content */}
+          {foods.map((food) => (
+            <Food key={food.id} food ={food}/>
+          ))}
+        </main>
       </Route>
       <Route path="/new">
         <h3>Our create form goes here!</h3>
@@ -34,4 +40,8 @@ function App() {
   );
 }
 
+
+
 export default App;
+
+
