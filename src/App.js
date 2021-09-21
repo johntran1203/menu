@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 import Food from "./components/Food";
 import Nav from "./components/Nav";
+import Form from "./components/Form";
 import { baseURL, config } from "./services";
 import './App.css';
 
@@ -31,7 +32,7 @@ function App() {
         </main>
       </Route>
       <Route path="/new">
-        <h3>Our create form goes here!</h3>
+        <Form setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/edit/:id">
         <h3>Our edit form goes here!</h3>
