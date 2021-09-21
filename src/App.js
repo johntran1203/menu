@@ -35,7 +35,7 @@ function App() {
         <Form setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/edit/:id">
-        <h3>Our edit form goes here!</h3>
+        <Form foods = {foods} setToggleFetch={setToggleFetch}/>
       </Route>
     </div>
   );
