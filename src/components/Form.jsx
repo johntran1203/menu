@@ -34,7 +34,7 @@ function Form(props) {
             protein,
             rice,
             side,
-            rating,
+    
         }
 
         if(params.id) {
@@ -63,9 +63,6 @@ function Form(props) {
         <label htmlFor="side">Side</label>
         <input id="side" type="text"  value={side} required autoComplete = 'off'
         onChange={(e) => setSide(e.target.value)}/>
-        <label htmlFor="rating">Rating:</label>
-        <input type="number" id="rating"  value={rating} required autoComplete = 'off'
-        onChange={(e) => setRating(e.target.valueAsNumber)}/>
         <button type="submit">Build</button>
     </form>
     );
