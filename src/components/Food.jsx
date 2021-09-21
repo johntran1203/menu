@@ -1,5 +1,15 @@
+import axios from "axios";
+import { baseURL, config } from "../services";
+
 function Food(props){
     const {name, side, drink, rice, protein, number } = props.food.fields
+
+    const editFood = async () => {
+        const foodURL = `${baseURL}/${props.food.id}`;
+        await axios.delete(foodURL, config);
+        props.setToggleFetch((curr) => !curr);
+    }
+
     return (
         <div className="food">
             <h3>{name}</h3>
@@ -8,6 +18,7 @@ function Food(props){
             <h3>{rice}</h3>
             <h3>{protein}</h3>
             <h3>{number}/5</h3>
+            <button onClick = {editFood}>Edit/Delete</button>
         </div>
     )
 }
