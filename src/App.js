@@ -5,6 +5,7 @@ import Food from "./components/Food";
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Contact from './components/Contact'
 import Form from "./components/Form";
 import { baseURL, config } from "./services";
 import './App.css';
@@ -45,6 +46,9 @@ function App() {
       <Route path="/edit/:id">
         <Form foods = {foods} setToggleFetch={setToggleFetch}/>
       </Route>
+      <Route path='/contact'>
+        <Contact />
+      </Route> 
       <Footer />
     </div>
   );

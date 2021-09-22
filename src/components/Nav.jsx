@@ -1,16 +1,53 @@
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {Button } from './Button';
+import './Navbar.css';
 
 function Nav() {
+    const [click, setClick] = useState(false)
+    const [button, setButton] = useState(true)
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false)
+    
+    const showButton = () => {
+        if(window.length <=960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+    window.addEventListener('resize', showButton);
+
+    useEffect(() => {
+        showButton();
+    },[])
+
     return (
         <nav className='navbar'>
             <div className='navbar-container'>
-            <Link to='/' className='navbar-logo'> Home <i className = 'fa-solid fa-receipt' />
+            <Link to='/' className='navbar-logo'> Home <i className = 'fa-solid fa-receipt' onClick ={closeMobileMenu} />
             </Link>
-            
-            <Link to='/new'>order</Link>
-            <Link to='/order'>Menu</Link>
-            <Link to='/'>Contact</Link>
+            <div className='menu-icon' onClick={handleClick}>
+                <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
+            </div>
+            <ul className={click ? 'nav-menu active': 'nav-menu'}>
+                <li className='nav-item'>
+                <Link to='/new' onClick={closeMobileMenu}>order</Link>
+                </li>
+                <li className='nav-item'>
+                <Link to='/menu' onClick={closeMobileMenu}>Favorite</Link>
+                </li>
+                <li className='nav-item'>
+                <Link to='/contact' onClick={closeMobileMenu}>Contact</Link>
+                </li>
+                <li className='nav-item'>
+                <Link to='/sign-up' onClick={closeMobileMenu}>Sign Up</Link>
+                </li>
+            </ul>
+            {button && <Button buttonStyle='btn--outline'>Sign up</Button>}
+            {/* <Link to='/new'>order</Link>
+            <Link to='/menu'>Favorite</Link>
+            <Link to='/contact'>Contact</Link> */}
             </div>
         </nav>
     )
