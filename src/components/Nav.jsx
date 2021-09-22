@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import {Button } from './Button';
 import './Navbar.css';
 
 function Nav() {
@@ -40,14 +39,9 @@ function Nav() {
                 <li className='nav-item'>
                 <Link to='/contact' onClick={closeMobileMenu}>Contact</Link>
                 </li>
-                <li className='nav-item'>
-                <Link to='/sign-up' onClick={closeMobileMenu}>Sign Up</Link>
-                </li>
+        
             </ul>
-            {button && <Button buttonStyle='btn--outline'>Sign up</Button>}
-            {/* <Link to='/new'>order</Link>
-            <Link to='/menu'>Favorite</Link>
-            <Link to='/contact'>Contact</Link> */}
+    
             </div>
         </nav>
     )
