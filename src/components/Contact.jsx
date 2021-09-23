@@ -1,4 +1,4 @@
-import { Button } from './Button';
+
 
 function Contact() {
     return (
@@ -13,7 +13,7 @@ function Contact() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Submit</Button>
+            <button>Submit</button>
          </form>
         </div>
     </section>

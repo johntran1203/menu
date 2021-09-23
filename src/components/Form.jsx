@@ -50,9 +50,7 @@ function Form(props) {
 
         props.setToggleFetch((curr) => !curr);
         history.push("/")
-        console.log(newFood)
-        // console.log(newFood.side)
-        // console.log(newFood.rice)
+    
     }
 
     
@@ -67,7 +65,7 @@ function Form(props) {
                     value={protein}
                     required 
                     onChange={(e) => setProtein(e.target.value)} 
-                   
+        
                     id='protein'
                 >
                     <option value="grill pork">grill pork</option>
@@ -88,7 +86,7 @@ function Form(props) {
                     onChange={(e) => setRice(e.target.value)}
                     id='rice'
                 >
-                    <option value="broken">broken rice</option>
+                    <option value="broken rice"> broken rice</option>
                     <option value="yellow rice">yellow rice</option>
                     <option value="brown rice">brown rice</option>
                     <option value="vermicelli noodles">vermicelli noodles</option>
