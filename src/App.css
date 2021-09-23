@@ -1,3 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+  background: #e6f14a;
+  
+  
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: rgb(26, 23, 23);
+  margin: 0;
+  margin-top: 30px;
+}
+
+h2{
+  color: #fff;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+p {
+  color: rgb(26, 23, 23);
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.25;
+  width: 50%;
+  margin: 0 auto;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -21,6 +65,7 @@ form {
   grid-template-columns: 1fr 4fr;
   width: 300px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 form button {
   grid-column: 1 / span 2;
@@ -31,4 +76,57 @@ form button {
     grid-template-columns: 1fr;
   }
   
+}
+
+button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: #404040;
+  color: #fff;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+
+input, select {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #404040;
+  width: 320px;
+  background: white;
+  color: rgb(26, 23, 23);
+  font-weight: 600;
+  margin: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.footer-container {
+  background-color: rgb(26, 23, 23);
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+img {
+  min-height: 30vh;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+
 }
