@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
+
       <Nav />
       <Route exact path='/'>
         <Home />
@@ -44,7 +44,7 @@ function App() {
         <Home />
       </Route> 
       <Route path="/new">
-        <Form setToggleFetch={setToggleFetch} />
+        <Form foods = {foods} setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/edit/:id">
         <Form foods = {foods} setToggleFetch={setToggleFetch}/>

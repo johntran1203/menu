@@ -6,12 +6,12 @@ import { baseURL, config } from '../services';
 
 function Form(props) {
     const [name, setName] = useState('')
-    const [protein, setProtein] = useState([])
+    const [protein, setProtein] = useState('')
     const [rice, setRice] = useState('')
     const [side, setSide] = useState('')
     const history = useHistory();
     const params = useParams();
-
+    
 
 
     useEffect(() => {
@@ -30,13 +30,16 @@ function Form(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        
+       
         const newFood = {
             name,
-            // protein,
-            // side,
-            // rice,
-    
-        }
+            protein,
+            rice,
+            side,
+            
+        } 
 
         if(params.id) {
             const foodURL = `${baseURL}/${params.id}`;
@@ -47,6 +50,9 @@ function Form(props) {
 
         props.setToggleFetch((curr) => !curr);
         history.push("/")
+        console.log(newFood)
+        // console.log(newFood.side)
+        // console.log(newFood.rice)
     }
 
     
@@ -56,11 +62,12 @@ function Form(props) {
         <input id="name" type="text" value={name} required autoComplete = 'off' autoFocus
         onChange={(e) => setName(e.target.value)}/>
 
-        {/* <label htmlFor="protein">Protien</label>
+        <label htmlFor="protein">Protien</label>
         <select 
                     value={protein}
                     required 
-                    onChange={(e) => setProtein(e.target.value)}
+                    onChange={(e) => setProtein(e.target.value)} 
+                   
                     id='protein'
                 >
                     <option value="grill pork">grill pork</option>
@@ -72,35 +79,39 @@ function Form(props) {
                     <option value="grill chicken">grill chicken</option>
                     <option value="crispy chicken">crispy chicken</option>
                     <option value="chinese sausage">chinese sausage</option>
-                </select> */}
+                </select>
 
-        {/* <label htmlFor="rice">Rice</label>
+        <label htmlFor="rice">Rice</label>
         <select 
                     value={rice}
-                    required 
+                
                     onChange={(e) => setRice(e.target.value)}
                     id='rice'
+                >
+                    <option value="broken">broken rice</option>
+                    <option value="yellow rice">yellow rice</option>
+                    <option value="brown rice">brown rice</option>
+                    <option value="vermicelli noodles">vermicelli noodles</option>
+            
+                </select>
+    
+    
+        <label htmlFor="side">side</label>
+        <select 
+                    value={side}
+                    required 
+                    onChange={(e) => setSide(e.target.value)} 
+                
+                    id='side'
                 >
                     <option value="tofu">tofu</option>
                     <option value="carrot and daikon">carrot and daikon</option>
                     <option value="eggroll">eggroll</option>
                     <option value="vegetables">vegetables</option>
                     <option value="beef broth">beef broth</option>
-                </select> */}
-    
-        {/* <label htmlFor="side">Side</label>
-        <select 
-                    value={side}
-                    required 
-                    onChange={(e) => setSide(e.target.value)}
-                    id='side'
-                >
-                    <option value="broken rice">broken rice</option>
-                    <option value="yellow rice">yellow rice</option>
-                    <option value="brown rice">brown rice</option>
-                    <option value="vermicelli noodles">vermicelli noodles</option>
-                </select> */}
-
+            
+                </select>
+                
         <button type="submit">Build</button>
     </form>
     );
