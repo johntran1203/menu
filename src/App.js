@@ -19,12 +19,14 @@ function App() {
       const response = await axios.get(baseURL, config);
       // console log the response's data
       setFood(response.data.records);
+    
     }
     getMenu();
   }, [toggleFetch]);
 
   return (
     <div className="App">
+      <h1>Hello</h1>
       <Nav />
       <Route exact path='/'>
         <Home />
@@ -34,6 +36,7 @@ function App() {
           {/* map through the characters array and render a p tag for each one with the character's name field as its text content */}
           {foods.map((food) => (
             <Food key={food.id} food ={food} setToggleFetch={setToggleFetch}/>
+            
           ))}
         </main>
       </Route>

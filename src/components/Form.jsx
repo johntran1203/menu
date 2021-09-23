@@ -1,17 +1,18 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from '../services';
 
 
 function Form(props) {
     const [name, setName] = useState('')
-    const [protein, setProtein] = useState('')
+    const [protein, setProtein] = useState([])
     const [rice, setRice] = useState('')
     const [side, setSide] = useState('')
-    const [rating, setRating] = useState(0)
-
+    const history = useHistory();
     const params = useParams();
+
+
 
     useEffect(() => {
         if(params.id){
@@ -21,7 +22,7 @@ function Form(props) {
                 setProtein(food.fields.protein)
                 setRice(food.fields.rice)
                 setSide(food.fields.side)
-                setRating(food.fields.rating)
+        
 
             }
         }
@@ -31,9 +32,9 @@ function Form(props) {
         e.preventDefault();
         const newFood = {
             name,
-            protein,
-            rice,
-            side,
+            // protein,
+            // side,
+            // rice,
     
         }
 
@@ -44,28 +45,70 @@ function Form(props) {
             await axios.post(baseURL, { fields: newFood}, config)
         }
 
-        
-
         props.setToggleFetch((curr) => !curr);
+        history.push("/")
     }
 
+    
     return (
-    <form onSubmit = {handleSubmit}>
+    <form onSubmit ={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input id="name" type="text" value={name} required autoComplete = 'off' autoFocus
         onChange={(e) => setName(e.target.value)}/>
-        <label htmlFor="protein">Protien</label>
-        <input id="protein" type="text" value={protein} required autoComplete = 'off'
-        onChange={(e) => setProtein(e.target.value)} />
-        <label htmlFor="rice">Rice</label>
-        <input id="rice" type="text" value={rice} required autoComplete = 'off'
-        onChange={(e) => setRice(e.target.value)} />
-        <label htmlFor="side">Side</label>
-        <input id="side" type="text"  value={side} required autoComplete = 'off'
-        onChange={(e) => setSide(e.target.value)}/>
+
+        {/* <label htmlFor="protein">Protien</label>
+        <select 
+                    value={protein}
+                    required 
+                    onChange={(e) => setProtein(e.target.value)}
+                    id='protein'
+                >
+                    <option value="grill pork">grill pork</option>
+                    <option value="grill pork sausage">grill pork sausage</option>
+                    <option value="julienne pork">julienne pork</option>
+                    <option value="steam egg cake with pork">steam egg cake with pork</option>
+                    <option value="pikle pork paste">pickle pork paste</option>
+                    <option value="grill pork chops">grill pork chops</option>
+                    <option value="grill chicken">grill chicken</option>
+                    <option value="crispy chicken">crispy chicken</option>
+                    <option value="chinese sausage">chinese sausage</option>
+                </select> */}
+
+        {/* <label htmlFor="rice">Rice</label>
+        <select 
+                    value={rice}
+                    required 
+                    onChange={(e) => setRice(e.target.value)}
+                    id='rice'
+                >
+                    <option value="tofu">tofu</option>
+                    <option value="carrot and daikon">carrot and daikon</option>
+                    <option value="eggroll">eggroll</option>
+                    <option value="vegetables">vegetables</option>
+                    <option value="beef broth">beef broth</option>
+                </select> */}
+    
+        {/* <label htmlFor="side">Side</label>
+        <select 
+                    value={side}
+                    required 
+                    onChange={(e) => setSide(e.target.value)}
+                    id='side'
+                >
+                    <option value="broken rice">broken rice</option>
+                    <option value="yellow rice">yellow rice</option>
+                    <option value="brown rice">brown rice</option>
+                    <option value="vermicelli noodles">vermicelli noodles</option>
+                </select> */}
+
         <button type="submit">Build</button>
     </form>
     );
 }
 
+
 export default Form;
+
+
+
+
