@@ -12,17 +12,20 @@ function Food(props){
     }
     
     return (
-        
-        <div className="food">
+        <div>
+            <div className="food">
             <h3>{name}</h3>
+            <h3>{protein}</h3>
             <h3>{side}</h3>
             <h3>{rice}</h3>
-            <h3>{protein}</h3>
+            
             <button onClick = {deleteFood}>Delete</button>
             <Link to={`/edit/${props.food.id}`}>
             <button>EDIT ORDER</button>
             </Link>
         </div>
+    </div>
+       
     )
 }
 
