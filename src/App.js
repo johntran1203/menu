@@ -3,62 +3,59 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 import Food from "./components/Food";
 import Nav from "./components/Nav";
-import Home from './components/Home';
-import Footer from './components/Footer';
-import Contact from './components/Contact'
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 import Form from "./components/Form";
 import { baseURL, config } from "./services";
-import './App.css';
+import "./App.css";
 
 function App() {
   const [foods, setFood] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     const getMenu = async () => {
-      // make an axios get call to our url, with our config object and save the response
       const response = await axios.get(baseURL, config);
-      // console log the response's data
+
       setFood(response.data.records);
-    
-    }
+    };
     getMenu();
   }, [toggleFetch]);
 
   return (
     <div className="App">
-
       <Nav />
-      <Route exact path='/'>
+      <Route exact path="/">
         <Home />
-      </Route> 
+      </Route>
       <Route exact path="/menu">
+
         <main>
-          {/* map through the characters array and render a p tag for each one with the character's name field as its text content */}
+          <input type='text' placeholder = 'search' onChange ={(e) => {setSearch(e.target.value)}} />
+          
           {foods.map((food) => (
-            <Food key={food.id} food ={food} setToggleFetch={setToggleFetch}/>
-            
+            <Food key={food.id} food={food} setToggleFetch={setToggleFetch} />
           ))}
         </main>
       </Route>
-      <Route path='/home'>
+      <Route path="/home">
         <Home />
-      </Route> 
+      </Route>
       <Route path="/new">
-        <Form foods = {foods} setToggleFetch={setToggleFetch} />
+        <Form foods={foods} setToggleFetch={setToggleFetch} />
       </Route>
       <Route path="/edit/:id">
-        <Form foods = {foods} setToggleFetch={setToggleFetch}/>
+        <Form foods={foods} setToggleFetch={setToggleFetch} />
       </Route>
-      <Route path='/contact'>
+      <Route path="/contact">
         <Contact />
-      </Route> 
+      </Route>
       <Footer />
     </div>
   );
 }
 
-
-
 export default App;
-
 

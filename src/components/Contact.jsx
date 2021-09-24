@@ -1,35 +1,30 @@
-
-
 function Contact() {
-    return (
-        <div>
-            <section >
-        <div className='input-areas'>
-            <h1>CONTACT ME</h1>
-            <form action="https://formsubmit.co/tranjohn1211@email.com" method="POST">
-            <input type="text" name="name" required  className='footer-input' placeholder='name' />
+  return (
+    <div>
+      <section>
+        <div className="input-areas">
+          <h1>CONTACT ME</h1>
+          <form action="mailto:tranjohn1211@gmail.com" method="POST">
+            <input
+              type="text"
+              name="name"
+              required
+              className="footer-input"
+              placeholder="Name"
+            />
             <br />
             <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
+              className="footer-input"
+              name="email"
+              type="email"
+              placeholder="Your Email"
             />
             <button>Submit</button>
-         </form>
+          </form>
         </div>
-    </section>
-            
-        </div>
-        
-    )
+      </section>
+    </div>
+  );
 }
 
 export default Contact;
-
-
-{/* // <form action="https://formsubmit.co/your@email.com" method="POST">
-//      <input type="text" name="name" required>
-//      <input type="email" name="email" required>
-//      <button type="submit">Send</button>
-// </form> */}

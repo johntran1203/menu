@@ -6,13 +6,13 @@
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif; 
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   color: #404040;
   text-align: center;
   background: #e6f14a;
-  
-  
+
+
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
   margin-top: 30px;
 }
 
-h2{
+h2 {
   color: #fff;
 }
 
@@ -68,6 +68,7 @@ form {
   margin: 0 auto;
   margin-top: 100px;
 }
+
 form button {
   grid-column: 1 / span 2;
 }
@@ -76,7 +77,7 @@ form button {
   main {
     grid-template-columns: 1fr;
   }
-  
+
 }
 
 button {
@@ -93,7 +94,8 @@ button {
 }
 
 
-input, select {
+input,
+select {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid #404040;
@@ -137,4 +139,20 @@ a {
   text-decoration: none;
 }
 
-a:visited {color: #FFF;} /* Visited link    */
+/* Visited link    */
+a:visited {
+  color: #FFF;
+}
+
+
+main input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #404040;
+  width: 300px;
+  background: white;
+  color: rgb(26, 23, 23);
+  font-weight: 600;
+  margin: 5px;
+  height: 50px;
+}
