@@ -67,7 +67,8 @@ function Form(props) {
                     onChange={(e) => setProtein(e.target.value)} 
         
                     id='protein'
-                >
+                >   
+                    <option value=""></option>
                     <option value="grill pork">grill pork</option>
                     <option value="grill pork sausage">grill pork sausage</option>
                     <option value="julienne pork">julienne pork</option>
@@ -85,7 +86,8 @@ function Form(props) {
                 
                     onChange={(e) => setRice(e.target.value)}
                     id='rice'
-                >
+                >   
+                    <option value=""></option>
                     <option value="broken rice"> broken rice</option>
                     <option value="yellow rice">yellow rice</option>
                     <option value="brown rice">brown rice</option>
@@ -101,7 +103,8 @@ function Form(props) {
                     onChange={(e) => setSide(e.target.value)} 
                 
                     id='side'
-                >
+                >   
+                    <option value=""></option>
                     <option value="tofu">tofu</option>
                     <option value="carrot and daikon">carrot and daikon</option>
                     <option value="eggroll">eggroll</option>

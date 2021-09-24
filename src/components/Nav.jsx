@@ -31,7 +31,7 @@ function Nav() {
             </div>
             <ul className={click ? 'nav-menu active': 'nav-menu'}>
                 <li className='nav-item'>
-                <Link to='/new' onClick={closeMobileMenu}>order</Link>
+                <Link to='/new' onClick={closeMobileMenu}>Order</Link>
                 </li>
                 <li className='nav-item'>
                 <Link to='/menu' onClick={closeMobileMenu}>Favorite</Link>
