@@ -6,7 +6,9 @@ function Contact() {
             <section >
         <div className='input-areas'>
             <h1>CONTACT ME</h1>
-          <form>
+            <form action="https://formsubmit.co/tranjohn1211@email.com" method="POST">
+            <input type="text" name="name" required  className='footer-input' placeholder='name' />
+            <br />
             <input
               className='footer-input'
               name='email'
@@ -24,3 +26,10 @@ function Contact() {
 }
 
 export default Contact;
+
+
+{/* // <form action="https://formsubmit.co/your@email.com" method="POST">
+//      <input type="text" name="name" required>
+//      <input type="email" name="email" required>
+//      <button type="submit">Send</button>
+// </form> */}
