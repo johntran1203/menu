@@ -132,3 +132,9 @@ img {
 
 }
 
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+a:visited {color: #FFF;} /* Visited link    */
