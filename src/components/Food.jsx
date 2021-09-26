@@ -20,9 +20,9 @@ function Food(props) {
         <h3>{rice}</h3>
 
         <button onClick={deleteFood}>Delete</button>
-        <Link to={`/edit/${props.food.id}`}>
+        {/* <Link to={`/edit/${props.food.id}`}>
           <button>EDIT ORDER</button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -17,10 +17,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   console.log(foods);
 
-  const filterFavorite = foods.map((food) => (
-    <FilterFavorite key={food.id} food={food} />
-  ));
-
   useEffect(() => {
     const getMenu = async () => {
       const response = await axios.get(baseURL, config);
@@ -74,12 +70,7 @@ function App() {
           })
           .map((val, key) => {
             return (
-              // <div clasName="user" key={key}>
-              //   <p>{val.fields.name}</p>
-              //   <p>{val.fields.protein}</p>
-              //   <p>{val.fields.side}</p>
-              //   <p>{val.fields.rice}</p>
-              // </div>
+          
               <FilterFavorite key={key} food={val} setToggleFetch={setToggleFetch} />
             );
           })}

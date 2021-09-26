@@ -11,15 +11,13 @@ function Home() {
           <img src={img} alt="rice" />
         </div>
         <div className="col">
-          <h3>ABOUT US</h3>
-          <p>
-            When going to an authentic vietnamese restaurant it could confusing
-            and stressful experience. As soon as you sit down the waiter gives
-            you a menu and ask what you want right away. The menu is in
-            vietnamese with a little bit of english. There's no picture of what
-            you want to order. With our App user can pick there food like
-            chiptole style.{" "}
-          </p>
+          <h3>Rules to follow:</h3>
+          <ol>
+            <li>Greet customers when they approach you. Look them in the eye and speak clearly and with enthusiasm.</li>
+            <li>Hold your tongue if something troubles you and always apoligize to be polite.</li>
+            <li>If there is a problem offer them free food to solve the solution</li>
+            <li>Thank them for choosing to eat here</li>
+            </ol>
           <div className="home-btn">
             <Link to="/new">
               <button className="btns">ORDER HERE</button>
