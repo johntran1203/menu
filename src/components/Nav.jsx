@@ -38,8 +38,13 @@ function Nav() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/FilterFavorite" onClick={closeMobileMenu}>
+              Edit
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/menu" onClick={closeMobileMenu}>
-              Favorite
+              Done
             </Link>
           </li>
           <li className="nav-item">
