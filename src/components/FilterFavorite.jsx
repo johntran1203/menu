@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function FilterFavorite(props) {
-    console.log(props.food.fields)
+    
     return (
         <div>
     

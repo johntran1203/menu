@@ -41,9 +41,11 @@ p {
 }
 
 .home-icon {
-  margin-left: 10px;
   display: flex;
   align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
 }
 
 main {

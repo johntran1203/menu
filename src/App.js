@@ -15,7 +15,7 @@ function App() {
   const [foods, setFood] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  console.log(foods);
+  
 
   useEffect(() => {
     const getMenu = async () => {
