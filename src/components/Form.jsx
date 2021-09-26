@@ -46,7 +46,7 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="name">Name</label>
       <input
         id="name"
         type="text"
@@ -87,7 +87,7 @@ function Form(props) {
         <option value="vermicelli noodles">vermicelli noodles</option>
       </select>
 
-      <label htmlFor="side">side</label>
+      <label htmlFor="side">Side</label>
       <select
         value={side}
         required
