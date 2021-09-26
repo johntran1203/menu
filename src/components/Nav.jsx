@@ -26,10 +26,12 @@ function Nav() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           {" "}
-          Home <i className="fa-solid fa-receipt" onClick={closeMobileMenu} />
+          Home <i className="fas fa-cash-register" onClick={closeMobileMenu} />
+
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
+
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
