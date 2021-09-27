@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import axios from "axios";
 import Food from "./components/Food";
 import Nav from "./components/Nav";
@@ -15,8 +15,17 @@ function App() {
   const [foods, setFood] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  
+  const location = useLocation();
 
+  useEffect(() => {
+      console.log(location.pathname)
+      if( location.pathname === '/FilterFavorite'){
+        setSearchTerm("")
+      }
+      //if the url is /FIlterfavorite
+      // set searchTerm to empty string
+
+  },[location.pathname])
   useEffect(() => {
     const getMenu = async () => {
       const response = await axios.get(baseURL, config);
@@ -54,13 +63,14 @@ function App() {
         <input
           type="text"
           placeholder="search"
+          value ={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
         />
         {foods
           .filter((val) => {
-            if (searchTerm == "") {
+            if (searchTerm === "") {
               return val;
             } else if (
               val.fields.name.toLowerCase().includes(searchTerm.toLowerCase())
