@@ -59,7 +59,7 @@
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
   .NavbarItems {
     position: relative;
   }
@@ -73,7 +73,8 @@
     top: 80px;
     left: -100%;
     transition: all 0.5s ease;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
+    padding-top: 0px;
   }
 
   .nav-menu.active {
