@@ -1,6 +1,6 @@
 import axios from "axios";
 import { baseURL, config } from "../services";
-import { Link } from "react-router-dom";
+
 
 function Food(props) {
   const { name, side, rice, protein } = props.food.fields;
@@ -20,9 +20,7 @@ function Food(props) {
         <h3>{rice}</h3>
 
         <button onClick={deleteFood}>Delete</button>
-        {/* <Link to={`/edit/${props.food.id}`}>
-          <button>EDIT ORDER</button>
-        </Link> */}
+  
       </div>
     </div>
   );
